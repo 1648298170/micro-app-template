@@ -1,0 +1,36 @@
+{
+  "name": "qiankun-template",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"@apps/*\" dev",
+    "dev:main": "pnpm --filter @apps/main-react-app dev",
+    "dev:react-admin": "pnpm --filter @apps/react-admin dev",
+    "dev:vue-admin": "pnpm --filter @apps/vue-admin dev",
+    "build": "pnpm -r --filter \"./packages/**\" --filter \"./apps/**\" build",
+    "type-check": "pnpm -r type-check",
+    "check": "pnpm run lint && pnpm run type-check && pnpm run format:check",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.6",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^6.0.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "oxlint": "^1.71.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "vite": "^8.0.16",
+    "vitest": "^3.0.2",
+    "vue-tsc": "^2.2.0"
+  },
+  "packageManager": "pnpm@10.0.0"
+}

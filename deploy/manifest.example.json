@@ -1,0 +1,14 @@
+{
+  "react-admin": {
+    "_comment": "主应用生产环境可读取 manifest 获取稳定 entry，发布回滚只需要切换这里的版本和地址。",
+    "version": "0.1.0",
+    "entry": "https://static.example.com/react-admin/0.1.0/index.html",
+    "status": "stable"
+  },
+  "vue-admin": {
+    "_comment": "status 可用于灰度、下线或运维后台过滤，不建议在主应用代码里硬编码版本。",
+    "version": "0.1.0",
+    "entry": "https://static.example.com/vue-admin/0.1.0/index.html",
+    "status": "stable"
+  }
+}
